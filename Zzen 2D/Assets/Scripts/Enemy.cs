@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EnemyFollowTrack : MonoBehaviour {
+public class Enemy : MonoBehaviour {
 
 	private Rigidbody2D _rb2d;
 	private int _targetedWaypoint = 0;
@@ -19,6 +19,7 @@ public class EnemyFollowTrack : MonoBehaviour {
 	void FixedUpdate () 
 	{
 		WaypointHandler ();
+		Debug.Log (_targetedWaypoint);
 	}
 
 	private void WaypointHandler()
@@ -41,5 +42,10 @@ public class EnemyFollowTrack : MonoBehaviour {
 			_rb2d.AddForce(new Vector2(movementNormal.x, movementNormal.y) * _movementSpeed);
 		}
 		transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0, targetAngle), Time.deltaTime * 3f);
+
+		if(_targetedWaypoint == 15f)
+		{
+			Destroy(this.gameObject.transform.parent.gameObject);
+		}
 	}
 }
