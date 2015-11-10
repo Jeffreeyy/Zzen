@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour {
 	private int _targetedWaypoint = 0;
 	private Transform _waypoints;
 
-	private float _movementSpeed = 3f;
+	[SerializeField] private float _movementSpeed = 4f;
 
 	void Start () 
 	{
@@ -19,7 +19,6 @@ public class Enemy : MonoBehaviour {
 	void FixedUpdate () 
 	{
 		WaypointHandler ();
-		Debug.Log (_targetedWaypoint);
 	}
 
 	private void WaypointHandler()
@@ -42,10 +41,13 @@ public class Enemy : MonoBehaviour {
 			_rb2d.AddForce(new Vector2(movementNormal.x, movementNormal.y) * _movementSpeed);
 		}
 		transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0, targetAngle), Time.deltaTime * 3f);
+	}
 
-		if(_targetedWaypoint == 15f)
+	void OnCollisionEnter2D(Collision2D col)
+	{
+		if(col.gameObject.tag == "Finish")
 		{
-			Destroy(this.gameObject.transform.parent.gameObject);
+			Destroy(gameObject);
 		}
 	}
 }
