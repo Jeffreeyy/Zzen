@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Enemy : MonoBehaviour {
+public class EnemyMovement : MonoBehaviour {
 
 	private Rigidbody2D _rb2d;
 	private int _targetedWaypoint = 0;
