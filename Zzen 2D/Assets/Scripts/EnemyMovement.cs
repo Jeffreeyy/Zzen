@@ -8,11 +8,13 @@ public class EnemyMovement : MonoBehaviour {
 	private Transform _waypoints;
     private float _offset = 2f;
     [SerializeField] private float _movementSpeed = 4f;
+    [SerializeField] private LivesPlayer button;
 
 	void Start () 
 	{
 		_rb2d = GetComponent<Rigidbody2D> ();
 		_waypoints = GameObject.Find("Waypoints").transform;
+        button = GameObject.Find("LivesText").GetComponent<LivesPlayer>();
 	}
 	
 
@@ -47,6 +49,7 @@ public class EnemyMovement : MonoBehaviour {
 	{
 		if(col.gameObject.tag == "Finish")
 		{
+            button.LivesMin(1);
 			Destroy(gameObject);
 		}
 	}
