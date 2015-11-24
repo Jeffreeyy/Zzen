@@ -6,13 +6,15 @@ public class EnemyMovement : MonoBehaviour {
 	private Rigidbody2D _rb2d;
 	private int _targetedWaypoint = 0;
 	private Transform _waypoints;
-
-	[SerializeField] private float _movementSpeed = 4f;
+    private float _offset = 2f;
+    [SerializeField] private float _movementSpeed = 4f;
+    [SerializeField] private LivesPlayer button;
 
 	void Start () 
 	{
 		_rb2d = GetComponent<Rigidbody2D> ();
 		_waypoints = GameObject.Find("Waypoints").transform;
+        button = GameObject.Find("LivesText").GetComponent<LivesPlayer>();
 	}
 	
 
@@ -24,7 +26,7 @@ public class EnemyMovement : MonoBehaviour {
 	private void WaypointHandler()
 	{
 		Transform targetWaypoint = _waypoints.GetChild(_targetedWaypoint);
-		Vector3 relative = targetWaypoint.position - transform.position;
+		Vector3 relative = (targetWaypoint.position + new Vector3(0,_offset,0)) - transform.position;
 		Vector3 movementNormal = Vector3.Normalize(relative);
 		float distanceToWaypoint = relative.magnitude;
 		//float targetAngle = Mathf.Atan2(relative.y, relative.x) * Mathf.Rad2Deg - 90;
@@ -47,6 +49,7 @@ public class EnemyMovement : MonoBehaviour {
 	{
 		if(col.gameObject.tag == "Finish")
 		{
+            button.LivesMin(1);
 			Destroy(gameObject);
 		}
 	}
