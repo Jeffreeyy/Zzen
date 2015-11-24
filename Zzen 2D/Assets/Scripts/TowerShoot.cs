@@ -20,13 +20,10 @@ public class TowerShoot : MonoBehaviour {
 
 	void Update () 
 	{
-        if (_towerTarget.GetTarget())
+        if (_towerTarget.GetTarget() != null)
         {
-            Debug.Log("Ik heb een target:" + gameObject.name);
-
             if(_cooldownTimer <= Time.time)
             {
-                Debug.Log("Ik schiet nu!");
                 Shoot();
             }
         }
@@ -36,11 +33,8 @@ public class TowerShoot : MonoBehaviour {
 	private void Shoot()
 	{
 		GameObject bullet = Instantiate (_bullet, this.transform.position, Quaternion.identity) as GameObject;
-        //Rigidbody2D rb2d = bullet.GetComponent<Rigidbody2D>();
+        bullet.GetComponent<BulletMovement>().SetTargetPosition(_towerTarget.GetTarget().transform.position);
 		bullet.transform.SetParent (this.transform);
         _cooldownTimer = Time.time + _cooldown;
-
-        bullet.transform.position = Vector2.MoveTowards(this.transform.position, _towerTarget.target.transform.position, 10f * Time.deltaTime);
-        //_towerTarget.target.transform.Translate(new Vector3(1f, 2f, 0f));
 	}
 }
