@@ -13,7 +13,10 @@ public class EnemyMovement : MonoBehaviour {
 	{
 		_rb2d = GetComponent<Rigidbody2D> ();
 		_waypoints = GameObject.Find("Waypoints").transform;
-        //button = GameObject.Find("LivesText").GetComponent<LivesPlayer>();
+        if (Application.loadedLevelName == "GameWithArt")
+        {
+            button = GameObject.Find("LivesText").GetComponent<LivesPlayer>();
+        }   
 	}
 	
 

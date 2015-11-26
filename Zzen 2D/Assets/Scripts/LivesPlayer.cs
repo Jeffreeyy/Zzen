@@ -7,7 +7,7 @@ public class LivesPlayer : MonoBehaviour {
     [SerializeField]
     private GameObject _button;
 
-    public  float lives = 10;
+    static public float lives = 10;
 
     private Text text;
 
@@ -16,9 +16,17 @@ public class LivesPlayer : MonoBehaviour {
         text.text = ("Lives: " + lives);
     }
 
+    void Update()
+    {
+        if (lives <= 0)
+        {
+            Application.LoadLevel("GameOver");
+        }
+    }
+
     public void LivesMin(int amount)
     {
-        lives--;
+        lives -= amount;
         text.text = ("Lives: " + lives);
     }
 }

@@ -25,6 +25,9 @@ public class EnemyController : MonoBehaviour
 
    void OnDestroy()
     {
-        GameObject.Find("EnemySpawner").GetComponent<EnemySpawner>().enemiesSpawned.Remove(this.gameObject);
+        if (Application.loadedLevelName == "GameWithArt")
+        {
+            GameObject.Find("EnemySpawner").GetComponent<EnemySpawner>().enemiesSpawned.Remove(this.gameObject);
+        }
     }
 }
