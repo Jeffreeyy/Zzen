@@ -21,7 +21,7 @@ public class BulletMovement : MonoBehaviour {
     {
         this.transform.position = Vector2.MoveTowards(this.transform.position, _targetPosition, 15f * Time.deltaTime);
 
-        if(_bulletLifeTime >= 1f)
+        if(_bulletLifeTime >= 0.5f)
         {
             Destroy(this.gameObject);
         }
