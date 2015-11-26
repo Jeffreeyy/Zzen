@@ -14,7 +14,7 @@ public class EnemyMovement : MonoBehaviour {
 	{
 		_rb2d = GetComponent<Rigidbody2D> ();
 		_waypoints = GameObject.Find("Waypoints").transform;
-        button = GameObject.Find("LivesText").GetComponent<LivesPlayer>();
+        //button = GameObject.Find("LivesText").GetComponent<LivesPlayer>();
 	}
 	
 
@@ -29,7 +29,6 @@ public class EnemyMovement : MonoBehaviour {
 		Vector3 relative = (targetWaypoint.position + new Vector3(0,_offset,0)) - transform.position;
 		Vector3 movementNormal = Vector3.Normalize(relative);
 		float distanceToWaypoint = relative.magnitude;
-		//float targetAngle = Mathf.Atan2(relative.y, relative.x) * Mathf.Rad2Deg - 90;
 
 		if(distanceToWaypoint < 0.1)
 		{
@@ -42,7 +41,6 @@ public class EnemyMovement : MonoBehaviour {
 		{
 			_rb2d.AddForce(new Vector2(movementNormal.x, movementNormal.y) * _movementSpeed);
 		}
-		//transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0, targetAngle), Time.deltaTime * 3f);
 	}
 
 	void OnCollisionEnter2D(Collision2D col)
