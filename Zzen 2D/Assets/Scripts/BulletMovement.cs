@@ -20,14 +20,8 @@ public class BulletMovement : MonoBehaviour {
     private void MoveBullet()
     {
         this.transform.position = Vector2.MoveTowards(this.transform.position, _targetPosition, 15f * Time.deltaTime);
-        /*
-        if(_targetPosition == null)
-        {
-            Destroy(this.gameObject);
-        }
 
-         */
-        if(_bulletLifeTime >= 2f)
+        if(_bulletLifeTime >= 1f)
         {
             Destroy(this.gameObject);
         }

@@ -13,6 +13,7 @@ public class EnemyController : MonoBehaviour
         if (_health <= 1)
         {
             Destroy(this.gameObject);
+            GameObject.Find("Main Camera").GetComponent<PlayerController>().seeds += 25;
         }
         else
         {

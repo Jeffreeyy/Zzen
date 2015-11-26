@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: c6a71b46bbdce0f49b0f5d7afcb0d110
-timeCreated: 1447855273
+timeCreated: 1448540568
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -77,8 +77,8 @@ TextureImporter:
         y: 1840
         width: 390
         height: 640
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .52288425, y: .118834302}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Enemy walking_1
       rect:
@@ -87,8 +87,8 @@ TextureImporter:
         y: 1840
         width: 390
         height: 640
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .5, y: .12348251}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Enemy walking_2
       rect:
@@ -97,8 +97,8 @@ TextureImporter:
         y: 1840
         width: 390
         height: 640
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .499999851, y: .142076105}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Enemy walking_3
       rect:
@@ -107,8 +107,8 @@ TextureImporter:
         y: 1840
         width: 390
         height: 640
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .515255988, y: .142076105}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Enemy walking_4
       rect:
@@ -117,8 +117,8 @@ TextureImporter:
         y: 1840
         width: 390
         height: 640
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .5, y: .146724507}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Enemy walking_5
       rect:
@@ -127,8 +127,8 @@ TextureImporter:
         y: 1840
         width: 390
         height: 640
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .5, y: .128130913}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Enemy walking_6
       rect:
@@ -137,8 +137,8 @@ TextureImporter:
         y: 1840
         width: 390
         height: 640
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .507627845, y: .146724507}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Enemy walking_7
       rect:
@@ -147,8 +147,8 @@ TextureImporter:
         y: 1840
         width: 390
         height: 640
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .535210729, y: .13524361}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Enemy walking_8
       rect:
@@ -157,8 +157,8 @@ TextureImporter:
         y: 1200
         width: 390
         height: 640
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .492371947, y: .146724507}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Enemy walking_9
       rect:
@@ -167,18 +167,18 @@ TextureImporter:
         y: 1200
         width: 390
         height: 640
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .5, y: .16066952}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Enemy walking_10
       rect:
         serializedVersion: 2
-        x: 780
+        x: 785
         y: 1200
         width: 390
         height: 640
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .561024666, y: .183911324}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Enemy walking_11
       rect:
@@ -187,8 +187,8 @@ TextureImporter:
         y: 1200
         width: 390
         height: 640
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .576280773, y: .16066952}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Enemy walking_12
       rect:
@@ -197,8 +197,8 @@ TextureImporter:
         y: 1200
         width: 390
         height: 640
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .599164903, y: .151372716}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Enemy walking_13
       rect:
@@ -207,28 +207,28 @@ TextureImporter:
         y: 1200
         width: 390
         height: 640
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .62204963, y: .137427717}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Enemy walking_14
       rect:
         serializedVersion: 2
-        x: 2373
+        x: 2379
         y: 1204
         width: 390
         height: 640
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .606792748, y: .118834302}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Enemy walking_15
       rect:
         serializedVersion: 2
-        x: 2777
-        y: 1200
+        x: 2795
+        y: 1210
         width: 429
         height: 640
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .521339238, y: .09948311}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Enemy walking_16
       rect:
@@ -237,8 +237,8 @@ TextureImporter:
         y: 560
         width: 390
         height: 640
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .53441149, y: .1199276}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Enemy walking_17
       rect:
@@ -247,8 +247,8 @@ TextureImporter:
         y: 560
         width: 390
         height: 640
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .487095594, y: .106821731}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Enemy walking_18
       rect:
@@ -257,8 +257,8 @@ TextureImporter:
         y: 560
         width: 390
         height: 640
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .517205656, y: .0648826584}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Enemy walking_7.1
       rect:
@@ -267,8 +267,8 @@ TextureImporter:
         y: 1839
         width: 359
         height: 641
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .512750387, y: .128671631}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
