@@ -44,6 +44,9 @@ public class EnemyController : MonoBehaviour
 
    void OnDestroy()
     {
+        if (GameObject.Find("EnemySpawner").GetComponent<EnemySpawner>().enemiesSpawned != null)
+        {
             GameObject.Find("EnemySpawner").GetComponent<EnemySpawner>().enemiesSpawned.Remove(this.gameObject);
+        }
     }
 }
