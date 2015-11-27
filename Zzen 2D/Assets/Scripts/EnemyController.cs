@@ -44,9 +44,6 @@ public class EnemyController : MonoBehaviour
 
    void OnDestroy()
     {
-        if (Application.loadedLevelName == "GameWithArt")
-        {
             GameObject.Find("EnemySpawner").GetComponent<EnemySpawner>().enemiesSpawned.Remove(this.gameObject);
-        }
     }
 }
